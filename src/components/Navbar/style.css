@@ -1,0 +1,152 @@
+/*------STYLING OF NAVBAR------*/
+
+.navbarContainer {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(61, 61, 61);
+    width: 100%;
+    height: 70px;
+    padding: 0;
+}
+
+.navbarLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: top;
+    width: 261px;
+    height: 100%;
+}
+
+.navbarRight {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: 100%;
+}
+
+.navbarLinks {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    height: 100%;
+}
+
+.dropdown {
+    height: 100%;
+}
+
+#navbarMainTitle {
+    font-family: "Century Gothic", sans-serif;
+    color: rgb(0, 153, 204);
+    font-size: 28px;
+    text-shadow: rgb(0 0 0 / 20%) 2px 5px 9px,
+        rgb(255 255 255 / 30%) 0px -5px 35px;
+    line-height: 42px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-style: normal;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-decoration: none;
+}
+
+#navbarSubtitle {
+    font-family: "Century Gothic", sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    line-height: 22px;
+    color: rgb(255, 255, 255);
+    text-shadow: none;
+    padding-left: 3px;
+    padding-right: 3px;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+}
+
+.navlinkHome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 100%;
+    margin: 0 2px;
+    background-color: #0099cc;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: arial;
+}
+
+.navlink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(61, 61, 61);
+    border: none;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: arial;
+    margin: 0 2px;
+    width: 110px;
+    height: 100%;
+}
+
+.navlink:hover {
+    background-color: #0099cc;
+    transition-duration: 0.3s;
+}
+
+.hamburgerMenu {
+    background-color: rgb(61, 61, 61);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.engFlag {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 30px;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 1160px) {
+    .navbarContainer {
+        padding: 0 10%;
+    }
+}
+
+@media screen and (min-width: 1038px) {
+    .hamburgerMenu {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1159px) {
+    .navbarContainer {
+        padding: 0 5%;
+    }
+}
+
+@media screen and (max-width: 1038px) {
+    .navbarRight {
+        display: none;
+    }
+    .hamburgerMenu {
+        height: 38px;
+        width: 38px;
+    }
+}
