@@ -5,9 +5,7 @@ body {
     padding: 0;
     margin: 0;
     background: #fafafa;
-    font-family: "Helvetica Neue", arial, sans-serif;
-    font-weight: 400;
-    color: #444;
+    color: #434343;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -19,4 +17,109 @@ body {
 #app {
     height: 100%;
     margin: 70px 0 0 0;
+}
+
+@media screen and (max-width: 700px) {
+    #app {
+        margin: 60px 0 0 0;
+    }
+}
+
+h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 2.375rem;
+    color: #434343;
+    line-height: 110%;
+    letter-spacing: 0.005em;
+}
+
+h2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: #434343;
+    line-height: 110%;
+    letter-spacing: 0.005em;
+}
+
+h3 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: #434343;
+    line-height: 110%;
+    letter-spacing: 0.005em;
+    margin: 38px 0 18px 0;
+}
+
+h4 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: #434343;
+    line-height: 110%;
+    letter-spacing: 0.005em;
+    margin: 20px 0 16px 0;
+}
+
+p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 1.0625rem;
+    color: #434343;
+    line-height: 140%;
+    letter-spacing: 0.005em;
+    margin: 0 0 20px 0;
+}
+
+.topLink {
+    padding: 0 10%;
+    width: 100%;
+    max-width: 1600px;
+    color: #999;
+}
+
+.topLink p {
+    color: inherit;
+    font-size: 0.9rem;
+}
+
+.quoteContainer {
+    margin: 3% 0 3% 0;
+    padding: 0 10%;
+    width: 100%;
+    max-width: 1600px;
+    text-align: justify;
+}
+
+.quote {
+    border-left: 5px solid #eee;
+}
+
+.quote h3 {
+    margin-left: 20px;
+    color: rgb(110, 23, 96);
+}
+
+.quote p {
+    margin-left: 20px;
+    line-height: 20px;
+    color: #999;
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+.imgPolaroid {
+    width: 100%;
+    padding: 5px;
+    margin-right: 80px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }

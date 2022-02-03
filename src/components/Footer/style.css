@@ -1,7 +1,90 @@
 .footerContainer {
-    padding: 30px 10%;
+    padding: 20px 10%;
     background-color: rgb(61, 61, 61);
     width: 100%;
     height: auto;
-    color: white;
+    color: #ffffff;
+}
+
+/*------STYLING OF FOOTER------*/
+
+.footerSections {
+    display: flex;
+    justify-content: space-between;
+    color: inherit;
+}
+
+.footerSection {
+    display: flex;
+    flex-direction: column;
+    align-items: top;
+    width: 20%;
+    color: inherit;
+}
+
+.footerSection h3 {
+    color: inherit;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.footerSection h4 {
+    color: inherit;
+    width: 100%;
+    font-size: 0.9rem;
+    margin: 10px 0 5px 0;
+}
+
+.footerSection p {
+    color: inherit;
+    font-size: 0.8rem;
+    width: 100%;
+}
+
+.footerInnerSection {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    color: inherit;
+}
+
+/* .footerLink {
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.9rem;
+    color: rgb(0, 153, 204);
+    margin: 10px 0;
+} */
+
+.footerInnerSection a {
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.9rem;
+    color: rgb(0, 153, 204);
+    margin: 7px 0 10px 0;
+}
+
+.copyright {
+    margin-top: 20px;
+    color: inherit;
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.7rem;
+    font-style: italic;
+    width: 100%;
+}
+
+@media screen and (max-width: 1093px) {
+    .footerSections {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        color: inherit;
+    }
+    .footerSection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        color: inherit;
+    }
 }
