@@ -1,22 +1,36 @@
 import style from "./style.css";
+import { useState, useEffect } from "preact/hooks";
+import { CarouselProvider, Slider, Slide } from "pure-react-carousel";
+import "pure-react-carousel/dist/react-carousel.es.css";
 import Event from "../../components/Event";
 import Receptions from "../../assets/receptions.jpg";
 import Patrimoine from "../../assets/events/small/patrimoine-21.jpg";
 import Automne from "../../assets/events/small/automne-21.jpg";
+import carouselBassin from "../../assets/carousel-home/bassin.jpg";
+import carouselSalon from "../../assets/carousel-home/grand_salon.jpg";
+import carouselInstruments from "../../assets/carousel-home/instruments.jpg";
+import carouselMalouiniere from "../../assets/carousel-home/malouiniere.jpg";
+import carouselNenuphare from "../../assets/carousel-home/nenuphare.jpg";
+import carouselChapelle from "../../assets/carousel-home/chapelle.jpg";
+import carouselBibliotheque from "../../assets/carousel-home/bibliotheque.jpg";
+import carouselNeige from "../../assets/carousel-home/neige.jpg";
+import carouselChambre from "../../assets/carousel-home/chambre_rose.jpg";
+import carouselFleurs from "../../assets/carousel-home/fleurs.jpg";
 
 const Home = () => {
-    // function useWindowSize() {
-    //     const [windowSize, setWindowSize] = useState(undefined);
-    //     useEffect(() => {
-    //         function handleResize() {
-    //             setWindowSize(window.innerWidth);
-    //         }
-    //         window.addEventListener("resize", handleResize);
-    //         handleResize();
-    //         return () => window.removeEventListener("resize", handleResize);
-    //     }, []);
-    //     return windowSize;
-    // }
+    function useWindowSize() {
+        const [windowSize, setWindowSize] = useState(undefined);
+        useEffect(() => {
+            function handleResize() {
+                setWindowSize(window.innerWidth);
+            }
+            window.addEventListener("resize", handleResize);
+            handleResize();
+            return () => window.removeEventListener("resize", handleResize);
+        }, []);
+        return windowSize;
+    }
+    const size = useWindowSize();
     return (
         <div class={style.homeMainContainer}>
             <div class={style.topImgContainer}>
@@ -45,97 +59,102 @@ const Home = () => {
                             La Ville Bague vous accueille pour une visite
                             d'exception.
                         </h2>
-                        {/* <CarouselProvider
-                    naturalSlideWidth={100}
-                    naturalSlideHeight={
-                        size > 700
-                            ? 60
-                            : size > 600
-                            ? 80
-                            : size > 480
-                            ? 100
-                            : 125
-                    }
-                    totalSlides={10}
-                    visibleSlides={size < 900 ? 2 : size < 1300 ? 3 : 4}
-                    isPlaying={true}
-                    infinite={true}
-                    interval={3000}
-                    step={size > 1300 ? 2 : 1}
-                >
-                    <Slider>
-                        <Slide index={0}>
-                            <img
-                                src={carouselBassin}
-                                alt="bassin"
-                                className="img-polaroid"
-                            />
-                        </Slide>
-                        <Slide index={1}>
-                            <img
-                                src={carouselSalon}
-                                alt="salon"
-                                className="img-polaroid"
-                            />
-                        </Slide>
-                        <Slide index={2}>
-                            <img
-                                src={carouselInstruments}
-                                alt="instruments"
-                                className="img-polaroid"
-                            />
-                        </Slide>
-                        <Slide index={3}>
-                            <img
-                                src={carouselMalouiniere}
-                                alt="malouiniere"
-                                className="img-polaroid"
-                            />
-                        </Slide>
-                        <Slide index={4}>
-                            <img
-                                src={carouselNenuphare}
-                                alt="nenuphare"
-                                className="img-polaroid"
-                            />
-                        </Slide>
-                        <Slide index={5}>
-                            <img
-                                src={carouselChapelle}
-                                alt="chapelle"
-                                className="img-polaroid"
-                            />
-                        </Slide>
-                        <Slide index={6}>
-                            <img
-                                src={carouselBibliotheque}
-                                alt="bibliotheque"
-                                className="img-polaroid"
-                            />
-                        </Slide>
-                        <Slide index={7}>
-                            <img
-                                src={carouselNeige}
-                                alt="neige"
-                                className="img-polaroid"
-                            />
-                        </Slide>
-                        <Slide index={8}>
-                            <img
-                                src={carouselChambre}
-                                alt="chambre"
-                                className="img-polaroid"
-                            />
-                        </Slide>
-                        <Slide index={9}>
-                            <img
-                                src={carouselFleurs}
-                                alt="fleurs"
-                                className="img-polaroid"
-                            />
-                        </Slide>
-                    </Slider>
-                </CarouselProvider> */}
+                        <div class={style.carouselContainer}>
+                            <CarouselProvider
+                                naturalSlideWidth={100}
+                                naturalSlideHeight={
+                                    size > 700
+                                        ? 60
+                                        : size > 600
+                                        ? 80
+                                        : size > 480
+                                        ? 100
+                                        : 125
+                                }
+                                totalSlides={10}
+                                visibleSlides={
+                                    size < 900 ? 2 : size < 1300 ? 3 : 4
+                                }
+                                isPlaying={true}
+                                infinite={true}
+                                interval={3000}
+                                step={size > 1300 ? 2 : 1}
+                                isIntrinsicHeight={true}
+                            >
+                                <Slider>
+                                    <Slide index={0}>
+                                        <img
+                                            src={carouselBassin}
+                                            alt="bassin"
+                                            class={style.imgPolaroidCarousel}
+                                        />
+                                    </Slide>
+                                    <Slide index={1}>
+                                        <img
+                                            src={carouselSalon}
+                                            alt="salon"
+                                            class={style.imgPolaroidCarousel}
+                                        />
+                                    </Slide>
+                                    <Slide index={2}>
+                                        <img
+                                            src={carouselInstruments}
+                                            alt="instruments"
+                                            class={style.imgPolaroidCarousel}
+                                        />
+                                    </Slide>
+                                    <Slide index={3}>
+                                        <img
+                                            src={carouselMalouiniere}
+                                            alt="malouiniere"
+                                            class={style.imgPolaroidCarousel}
+                                        />
+                                    </Slide>
+                                    <Slide index={4}>
+                                        <img
+                                            src={carouselNenuphare}
+                                            alt="nenuphare"
+                                            class={style.imgPolaroidCarousel}
+                                        />
+                                    </Slide>
+                                    <Slide index={5}>
+                                        <img
+                                            src={carouselChapelle}
+                                            alt="chapelle"
+                                            class={style.imgPolaroidCarousel}
+                                        />
+                                    </Slide>
+                                    <Slide index={6}>
+                                        <img
+                                            src={carouselBibliotheque}
+                                            alt="bibliotheque"
+                                            class={style.imgPolaroidCarousel}
+                                        />
+                                    </Slide>
+                                    <Slide index={7}>
+                                        <img
+                                            src={carouselNeige}
+                                            alt="neige"
+                                            class={style.imgPolaroidCarousel}
+                                        />
+                                    </Slide>
+                                    <Slide index={8}>
+                                        <img
+                                            src={carouselChambre}
+                                            alt="chambre"
+                                            class={style.imgPolaroidCarousel}
+                                        />
+                                    </Slide>
+                                    <Slide index={9}>
+                                        <img
+                                            src={carouselFleurs}
+                                            alt="fleurs"
+                                            class={style.imgPolaroidCarousel}
+                                        />
+                                    </Slide>
+                                </Slider>
+                            </CarouselProvider>
+                        </div>
                         <p>
                             Faisant partie intégrante de l'histoire de
                             Saint-Malo, les malouinières sont uniques. En

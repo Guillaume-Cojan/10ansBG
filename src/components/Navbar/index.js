@@ -10,14 +10,14 @@ const Navbar = () => (
                 <Link id={style.navbarMainTitle} href="/">
                     LA VILLE BAGUE
                 </Link>
-                <Link
+                <a
                     href="http://www.saintcoulomb.com/"
                     id={style.navbarSubtitle}
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                 >
                     SAINT-COULOMB
-                </Link>
+                </a>
             </div>
             <div class={style.hamburgerMenu}>
                 <img src={Hamburger} alt="menu" />
