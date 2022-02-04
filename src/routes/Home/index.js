@@ -16,6 +16,16 @@ import carouselBibliotheque from "../../assets/carousel-home/bibliotheque.jpg";
 import carouselNeige from "../../assets/carousel-home/neige.jpg";
 import carouselChambre from "../../assets/carousel-home/chambre_rose.jpg";
 import carouselFleurs from "../../assets/carousel-home/fleurs.jpg";
+import carouselBassinMobile from "../../assets/carousel-home/bassin_mobile.jpg";
+import carouselSalonMobile from "../../assets/carousel-home/grand_salon_mobile.jpg";
+import carouselInstrumentsMobile from "../../assets/carousel-home/instruments_mobile.jpg";
+import carouselMalouiniereMobile from "../../assets/carousel-home/malouiniere_mobile.jpg";
+import carouselNenuphareMobile from "../../assets/carousel-home/nenuphare_mobile.jpg";
+import carouselChapelleMobile from "../../assets/carousel-home/chapelle_mobile.jpg";
+import carouselBibliothequeMobile from "../../assets/carousel-home/bibliotheque_mobile.jpg";
+import carouselNeigeMobile from "../../assets/carousel-home/neige_mobile.jpg";
+import carouselChambreMobile from "../../assets/carousel-home/chambre_rose_mobile.jpg";
+import carouselFleursMobile from "../../assets/carousel-home/fleurs_mobile.jpg";
 
 const Home = () => {
     function useWindowSize() {
@@ -84,70 +94,110 @@ const Home = () => {
                                 <Slider>
                                     <Slide index={0}>
                                         <img
-                                            src={carouselBassin}
+                                            src={
+                                                size < 900
+                                                    ? carouselBassinMobile
+                                                    : carouselBassin
+                                            }
                                             alt="bassin"
                                             class={style.imgPolaroidCarousel}
                                         />
                                     </Slide>
                                     <Slide index={1}>
                                         <img
-                                            src={carouselSalon}
+                                            src={
+                                                size < 900
+                                                    ? carouselSalonMobile
+                                                    : carouselSalon
+                                            }
                                             alt="salon"
                                             class={style.imgPolaroidCarousel}
                                         />
                                     </Slide>
                                     <Slide index={2}>
                                         <img
-                                            src={carouselInstruments}
+                                            src={
+                                                size < 900
+                                                    ? carouselInstrumentsMobile
+                                                    : carouselInstruments
+                                            }
                                             alt="instruments"
                                             class={style.imgPolaroidCarousel}
                                         />
                                     </Slide>
                                     <Slide index={3}>
                                         <img
-                                            src={carouselMalouiniere}
+                                            src={
+                                                size < 900
+                                                    ? carouselMalouiniereMobile
+                                                    : carouselMalouiniere
+                                            }
                                             alt="malouiniere"
                                             class={style.imgPolaroidCarousel}
                                         />
                                     </Slide>
                                     <Slide index={4}>
                                         <img
-                                            src={carouselNenuphare}
+                                            src={
+                                                size < 900
+                                                    ? carouselNenuphareMobile
+                                                    : carouselNenuphare
+                                            }
                                             alt="nenuphare"
                                             class={style.imgPolaroidCarousel}
                                         />
                                     </Slide>
                                     <Slide index={5}>
                                         <img
-                                            src={carouselChapelle}
+                                            src={
+                                                size < 900
+                                                    ? carouselChapelleMobile
+                                                    : carouselChapelle
+                                            }
                                             alt="chapelle"
                                             class={style.imgPolaroidCarousel}
                                         />
                                     </Slide>
                                     <Slide index={6}>
                                         <img
-                                            src={carouselBibliotheque}
+                                            src={
+                                                size < 900
+                                                    ? carouselBibliothequeMobile
+                                                    : carouselBibliotheque
+                                            }
                                             alt="bibliotheque"
                                             class={style.imgPolaroidCarousel}
                                         />
                                     </Slide>
                                     <Slide index={7}>
                                         <img
-                                            src={carouselNeige}
+                                            src={
+                                                size < 900
+                                                    ? carouselNeigeMobile
+                                                    : carouselNeige
+                                            }
                                             alt="neige"
                                             class={style.imgPolaroidCarousel}
                                         />
                                     </Slide>
                                     <Slide index={8}>
                                         <img
-                                            src={carouselChambre}
+                                            src={
+                                                size < 900
+                                                    ? carouselChambreMobile
+                                                    : carouselChambre
+                                            }
                                             alt="chambre"
                                             class={style.imgPolaroidCarousel}
                                         />
                                     </Slide>
                                     <Slide index={9}>
                                         <img
-                                            src={carouselFleurs}
+                                            src={
+                                                size < 900
+                                                    ? carouselFleursMobile
+                                                    : carouselFleurs
+                                            }
                                             alt="fleurs"
                                             class={style.imgPolaroidCarousel}
                                         />
