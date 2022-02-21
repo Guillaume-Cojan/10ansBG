@@ -1,6 +1,14 @@
 .componentContainer {
     padding: 50px 0;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+hr {
+    width: 100%;
+    margin: 10px 0 40px 0;
 }
 
 .topLink {
@@ -53,25 +61,23 @@
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-hr {
-    width: 100%;
-    margin: 10px 0 40px 0;
-}
-
 /*------STYLING OF HISTORY------*/
 
 .historyIntro {
     padding: 0 10%;
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 1600px;
     text-align: justify;
 }
 
 .historyDetails {
     padding: 0 10%;
-    margin: 1% 0;
-    text-align: justify;
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 1600px;
     display: flex;
     flex-direction: column;
-    align-items: top;
 }
 
 .historyDetails h2 {
