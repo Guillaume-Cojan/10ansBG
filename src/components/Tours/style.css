@@ -139,6 +139,16 @@ hr {
     .toursDetailsLeft {
         width: 100%;
         margin-right: 0;
+        margin-bottom: 40px;
+    }
+    .imgPolaroid {
+        margin: 14px 0 0 0;
+    }
+    #imgPolaroidDesktop {
+        display: none;
+    }
+    #imgPolaroidMobile {
+        display: block;
     }
 }
 
@@ -172,16 +182,5 @@ hr {
 
     .toursDetailsLeft {
         padding: 6px 26px;
-        margin-bottom: 40px;
-    }
-
-    .imgPolaroid {
-        margin: 14px 0 0 0;
-    }
-    #imgPolaroidDesktop {
-        display: none;
-    }
-    #imgPolaroidMobile {
-        display: block;
     }
 }
