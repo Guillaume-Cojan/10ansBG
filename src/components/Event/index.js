@@ -10,9 +10,13 @@ const Event = ({ title, img, description, link, linkText }) => (
         ></div>
         <div class={style.eventCard}>
             <h3>{title}</h3>
-            <Link class={style.eventLink} href={link}>
-                <img class={style.imgPolaroid} src={img} alt="event" />
-            </Link>
+            {img === "" ? (
+                ""
+            ) : (
+                <Link class={style.eventLink} href={link}>
+                    <img class={style.imgPolaroid} src={img} alt="event" />
+                </Link>
+            )}
             <p>{description}</p>
             <div class={style.eventLinkContainer}>
                 <Link class={style.eventLinkBtn} href={link}>

@@ -255,35 +255,37 @@ const Home = () => {
                     <div class={style.homeOtherRight}>
                         <h2>A LA UNE</h2>
                         <Event
-                            title="Journées du Patrimoine:"
-                            img={Patrimoine}
+                            title="Saison 2022 :"
+                            img=""
                             description={
                                 <>
-                                    La Malouinière sera ouverte pour les
-                                    Journées du Patrimoine les
-                                    <strong> 18 et 19 septembre</strong>{" "}
-                                    prochains. Visites guidées en continu sans
-                                    réservation
-                                    <strong> de 10h à 12h</strong> et
-                                    <strong> de 14h30 à 17h30</strong>.
+                                    La Malouinière sera ouverte à la visite
+                                    guidée pour les particuliers à partir du{" "}
+                                    <strong>samedi 8 avril 2022</strong>{" "}
+                                    (vacances de Pâques).
+                                    <br />
+                                    Horaires et modalités des visites ci-dessous
+                                    :
                                 </>
                             }
-                            link="/evenements"
-                            linkText="En savoir plus"
+                            link="/visites_guidees"
+                            linkText="Plus d'infos"
                         />
                         <Event
-                            title="Marché d'Automne:"
+                            title="Marché de Printemps :"
                             img={Automne}
                             description={
                                 <>
                                     La Malouinière organise, les
                                     <strong>
                                         {" "}
-                                        25 et 26 septembre 2021 de 10h à 18h
+                                        jeudi 26 et vendredi 27 mai 2022 de 10h
+                                        à 18h
                                     </strong>{" "}
-                                    un Marché d'Automne. Artisans d'Art et
-                                    locaux, pépiniériste et métiers de bouche
-                                    seront présents en nombre.
+                                    les Journées Plantes & Gourmandises.
+                                    <br />
+                                    Artisans d'Art et locaux, pépiniériste et
+                                    métiers de bouche seront présents en nombre.
                                 </>
                             }
                             link="/evenements"

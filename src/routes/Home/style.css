@@ -239,6 +239,9 @@
     .homeOtherLeft img {
         margin-bottom: 26px;
     }
+    .homeOtherRight {
+        padding: 10px;
+    }
 }
 
 @media screen and (max-width: 939px) {
