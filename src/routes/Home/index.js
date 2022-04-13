@@ -45,46 +45,27 @@ const Home = () => {
         <div class={style.homeMainContainer}>
             <div class={style.topImgContainer}>
                 <div class={style.homeWelcomeTextContainer}>
-                    <h1 id={style.welcomeMessage}>
-                        Bienvenue à la Malouinière!
-                    </h1>
-                    <div id={style.welcomeSubtitle}>
-                        Invitez-vous au cœur d'une demeure d'armateurs malouins.
-                    </div>
+                    <h1 id={style.welcomeMessage}>Bienvenue à la Malouinière!</h1>
+                    <div id={style.welcomeSubtitle}>Invitez-vous au cœur d'une demeure d'armateurs malouins.</div>
                 </div>
             </div>
             <div class={style.home}>
                 <div class={style.homeIntro}>
                     <h1>La Ville Bague ouverte au public</h1>
                     <p>
-                        Un cadre magnifique à quelques minutes de Saint-Malo,
-                        une demeure du temps des riches armateurs malouins, un
-                        parc de plusieurs hectares avec son bassin, son
-                        colombier, sa chapelle et son jardin à la française...
+                        Un cadre magnifique à quelques minutes de Saint-Malo, une demeure du temps des riches armateurs malouins, un parc de plusieurs hectares
+                        avec son bassin, son colombier, sa chapelle et son jardin à la française...
                     </p>
                 </div>
                 <div class={style.homeVisit}>
                     <div class={style.homeVisitContent}>
-                        <h2>
-                            La Ville Bague vous accueille pour une visite
-                            d'exception.
-                        </h2>
+                        <h2>La Ville Bague vous accueille pour une visite d'exception.</h2>
                         <div class={style.carouselContainer}>
                             <CarouselProvider
                                 naturalSlideWidth={100}
-                                naturalSlideHeight={
-                                    size > 700
-                                        ? 60
-                                        : size > 600
-                                        ? 80
-                                        : size > 480
-                                        ? 100
-                                        : 125
-                                }
+                                naturalSlideHeight={size > 700 ? 60 : size > 600 ? 80 : size > 480 ? 100 : 125}
                                 totalSlides={10}
-                                visibleSlides={
-                                    size < 900 ? 2 : size < 1300 ? 3 : 4
-                                }
+                                visibleSlides={size < 900 ? 2 : size < 1300 ? 3 : 4}
                                 isPlaying={true}
                                 infinite={true}
                                 interval={3000}
@@ -93,131 +74,56 @@ const Home = () => {
                             >
                                 <Slider>
                                     <Slide index={0}>
-                                        <img
-                                            src={
-                                                size < 900
-                                                    ? carouselBassinMobile
-                                                    : carouselBassin
-                                            }
-                                            alt="bassin"
-                                            class={style.imgPolaroidCarousel}
-                                        />
+                                        <img src={size < 900 ? carouselBassinMobile : carouselBassin} alt="bassin" class={style.imgPolaroidCarousel} />
                                     </Slide>
                                     <Slide index={1}>
-                                        <img
-                                            src={
-                                                size < 900
-                                                    ? carouselSalonMobile
-                                                    : carouselSalon
-                                            }
-                                            alt="salon"
-                                            class={style.imgPolaroidCarousel}
-                                        />
+                                        <img src={size < 900 ? carouselSalonMobile : carouselSalon} alt="salon" class={style.imgPolaroidCarousel} />
                                     </Slide>
                                     <Slide index={2}>
                                         <img
-                                            src={
-                                                size < 900
-                                                    ? carouselInstrumentsMobile
-                                                    : carouselInstruments
-                                            }
+                                            src={size < 900 ? carouselInstrumentsMobile : carouselInstruments}
                                             alt="instruments"
                                             class={style.imgPolaroidCarousel}
                                         />
                                     </Slide>
                                     <Slide index={3}>
                                         <img
-                                            src={
-                                                size < 900
-                                                    ? carouselMalouiniereMobile
-                                                    : carouselMalouiniere
-                                            }
+                                            src={size < 900 ? carouselMalouiniereMobile : carouselMalouiniere}
                                             alt="malouiniere"
                                             class={style.imgPolaroidCarousel}
                                         />
                                     </Slide>
                                     <Slide index={4}>
-                                        <img
-                                            src={
-                                                size < 900
-                                                    ? carouselNenuphareMobile
-                                                    : carouselNenuphare
-                                            }
-                                            alt="nenuphare"
-                                            class={style.imgPolaroidCarousel}
-                                        />
+                                        <img src={size < 900 ? carouselNenuphareMobile : carouselNenuphare} alt="nenuphare" class={style.imgPolaroidCarousel} />
                                     </Slide>
                                     <Slide index={5}>
-                                        <img
-                                            src={
-                                                size < 900
-                                                    ? carouselChapelleMobile
-                                                    : carouselChapelle
-                                            }
-                                            alt="chapelle"
-                                            class={style.imgPolaroidCarousel}
-                                        />
+                                        <img src={size < 900 ? carouselChapelleMobile : carouselChapelle} alt="chapelle" class={style.imgPolaroidCarousel} />
                                     </Slide>
                                     <Slide index={6}>
                                         <img
-                                            src={
-                                                size < 900
-                                                    ? carouselBibliothequeMobile
-                                                    : carouselBibliotheque
-                                            }
+                                            src={size < 900 ? carouselBibliothequeMobile : carouselBibliotheque}
                                             alt="bibliotheque"
                                             class={style.imgPolaroidCarousel}
                                         />
                                     </Slide>
                                     <Slide index={7}>
-                                        <img
-                                            src={
-                                                size < 900
-                                                    ? carouselNeigeMobile
-                                                    : carouselNeige
-                                            }
-                                            alt="neige"
-                                            class={style.imgPolaroidCarousel}
-                                        />
+                                        <img src={size < 900 ? carouselNeigeMobile : carouselNeige} alt="neige" class={style.imgPolaroidCarousel} />
                                     </Slide>
                                     <Slide index={8}>
-                                        <img
-                                            src={
-                                                size < 900
-                                                    ? carouselChambreMobile
-                                                    : carouselChambre
-                                            }
-                                            alt="chambre"
-                                            class={style.imgPolaroidCarousel}
-                                        />
+                                        <img src={size < 900 ? carouselChambreMobile : carouselChambre} alt="chambre" class={style.imgPolaroidCarousel} />
                                     </Slide>
                                     <Slide index={9}>
-                                        <img
-                                            src={
-                                                size < 900
-                                                    ? carouselFleursMobile
-                                                    : carouselFleurs
-                                            }
-                                            alt="fleurs"
-                                            class={style.imgPolaroidCarousel}
-                                        />
+                                        <img src={size < 900 ? carouselFleursMobile : carouselFleurs} alt="fleurs" class={style.imgPolaroidCarousel} />
                                     </Slide>
                                 </Slider>
                             </CarouselProvider>
                         </div>
                         <p>
-                            Faisant partie intégrante de l'histoire de
-                            Saint-Malo, les malouinières sont uniques. En
-                            visitant une authentique maison de corsaires et
-                            d'armateurs malouins du XVIIIè siècle, vous
-                            découvrirez un endroit paisible à quelques
-                            kilomètres de Saint-Malo, édifié dans le but
-                            d'échapper à la ville pour un moment de repos. Vous
-                            aurez ainsi le loisir d'admirer le parc avec son
-                            jardin à la française, de visiter la chapelle et le
-                            pigeonnier de la demeure et également l'intérieur de
-                            la malouinière avec son mobilier d'époque et ses
-                            collections d'armes corsaires.
+                            Faisant partie intégrante de l'histoire de Saint-Malo, les malouinières sont uniques. En visitant une authentique maison de
+                            corsaires et d'armateurs malouins du XVIIIè siècle, vous découvrirez un endroit paisible à quelques kilomètres de Saint-Malo, édifié
+                            dans le but d'échapper à la ville pour un moment de repos. Vous aurez ainsi le loisir d'admirer le parc avec son jardin à la
+                            française, de visiter la chapelle et le pigeonnier de la demeure et également l'intérieur de la malouinière avec son mobilier
+                            d'époque et ses collections d'armes corsaires.
                         </p>
                     </div>
                 </div>
@@ -225,31 +131,17 @@ const Home = () => {
                     <div class={style.homeOtherLeft}>
                         <h2>La Ville Bague vous propose également :</h2>
                         <h3>Réceptions, événements, location de gîtes...</h3>
-                        <img
-                            src={Receptions}
-                            alt="receptions"
-                            class={style.imgPolaroid}
-                        />
+                        <img src={Receptions} alt="receptions" class={style.imgPolaroid} />
                         <p>
-                            Pour réussir vos dîners, cocktail, séminaires...
-                            Laissez-vous charmer par l'authenticité du parc ou
-                            des intérieurs de la malouinière spécialement
-                            aménagés pour l'occasion. Avec une vue imprenable
-                            sur le jardin, les salons représentent un lieu
-                            d'exception pour toutes vos réceptions.
+                            Pour réussir vos dîners, cocktail, séminaires... Laissez-vous charmer par l'authenticité du parc ou des intérieurs de la malouinière
+                            spécialement aménagés pour l'occasion. Avec une vue imprenable sur le jardin, les salons représentent un lieu d'exception pour
+                            toutes vos réceptions.
                         </p>
+                        <p>Vous restez libre du choix de vos prestataires. Pour plus de confort, nous pouvons vous recommander nos prestataires partenaires.</p>
                         <p>
-                            Vous restez libre du choix de vos prestataires. Pour
-                            plus de confort, nous pouvons vous recommander nos
-                            prestataires partenaires.
-                        </p>
-                        <p>
-                            La Ville Bague met également à votre disposition
-                            deux gîtes pour compléter vos réceptions ou
-                            simplement pour vous offrir un moment de repos.
-                            Situés à l'intérieur des murs de la propriété, ces
-                            bâtiments de charme sont disponibles à la location à
-                            la semaine ou au week-end.
+                            La Ville Bague met également à votre disposition deux gîtes pour compléter vos réceptions ou simplement pour vous offrir un moment
+                            de repos. Situés à l'intérieur des murs de la propriété, ces bâtiments de charme sont disponibles à la location à la semaine ou au
+                            week-end.
                         </p>
                     </div>
                     <div class={style.homeOtherRight}>
@@ -259,13 +151,10 @@ const Home = () => {
                             img=""
                             description={
                                 <>
-                                    La Malouinière sera ouverte à la visite
-                                    guidée pour les particuliers à partir du{" "}
-                                    <strong>samedi 8 avril 2022</strong>{" "}
-                                    (vacances de Pâques).
+                                    La Malouinière sera ouverte à la visite guidée pour les particuliers à partir du <strong>vendredi 1er avril 2022</strong>
+                                    .
                                     <br />
-                                    Horaires et modalités des visites ci-dessous
-                                    :
+                                    Horaires et modalités des visites ci-dessous :
                                 </>
                             }
                             link="/visites_guidees"
@@ -277,15 +166,9 @@ const Home = () => {
                             description={
                                 <>
                                     La Malouinière organise, les
-                                    <strong>
-                                        {" "}
-                                        jeudi 26 et vendredi 27 mai 2022 de 10h
-                                        à 18h
-                                    </strong>{" "}
-                                    les Journées Plantes & Gourmandises.
+                                    <strong> jeudi 26 et vendredi 27 mai 2022 de 10h à 18h</strong> les Journées Plantes & Gourmandises.
                                     <br />
-                                    Artisans d'Art et locaux, pépiniériste et
-                                    métiers de bouche seront présents en nombre.
+                                    Artisans d'Art et locaux, pépiniériste et métiers de bouche seront présents en nombre.
                                 </>
                             }
                             link="/evenements"

@@ -8,6 +8,8 @@ body {
     color: #434343;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 * {
@@ -93,11 +95,5 @@ p {
     p {
         font-size: 1rem;
         line-height: 130%;
-    }
-}
-
-@media screen and (max-width: 700px) {
-    .topLink {
-        display: none;
     }
 }

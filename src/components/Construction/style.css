@@ -50,6 +50,7 @@ hr {
 
 .imgPolaroid {
     width: 100%;
+    height: auto;
     padding: 5px;
     margin-right: 80px;
     margin-top: 20px;
@@ -87,11 +88,23 @@ hr {
     text-align: justify;
 }
 
+.constructionDetailsFirst div:first-child {
+    display: flex;
+    align-items: center;
+}
+
 .constructionDetailsFirst img {
     width: 280px;
+    height: auto;
 }
 
 .constructionDetailsParagraphs {
     margin-left: 30px;
     margin-top: 20px;
+}
+
+@media screen and (max-width: 1038px) {
+    .constructionDetailsFirst {
+        flex-direction: column;
+    }
 }
