@@ -27,7 +27,6 @@ const Navbar = () => {
                             setMobileOpen(!mobileOpen);
                         }}
                     >
-                        {/* <img src={Hamburger} alt="menu" /> */}
                         <div class={style.hamburgerMenuBar}></div>
                     </div>
                     <div class={style.navbarRight}>
