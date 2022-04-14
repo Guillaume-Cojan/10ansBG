@@ -7,12 +7,14 @@ import { useState, useEffect } from "preact/hooks";
 const Navbar = () => {
     const [mobileOpen, setMobileOpen] = useState(false);
     const [showLieuMobile, setShowLieuMobile] = useState(false);
+    const [showLieu, setShowLieu] = useState(false);
     const [showPrestaMobile, setShowPrestaMobile] = useState(false);
+    const [showPresta, setShowPresta] = useState(false);
 
     return (
         <>
             <div class={style.navbarMainContainer}>
-                <nav class={style.navbarContainer}>
+                <nav class={style.navbarContainer} onMouseEnter={() => setShowLieu(false) + setShowPresta(false)}>
                     <div class={style.navbarLeft}>
                         <Link id={style.navbarMainTitle} href="/">
                             LA VILLE BAGUE
@@ -31,60 +33,134 @@ const Navbar = () => {
                     </div>
                     <div class={style.navbarRight}>
                         <div class={style.navbarLinks}>
-                            <Link class={style.navlinkHome} activeClassName={style.active} href="/">
+                            <Link
+                                class={style.navlinkHome}
+                                activeClassName={style.active}
+                                href="/"
+                                onMouseEnter={() => setShowLieu(false) + setShowPresta(false)}
+                            >
                                 Accueil
                             </Link>
                             <div>
-                                <div class={`${style.navlink} ${style.dropdownHeader}`}>Le lieu ▾</div>
-                                <div class={style.dropdownContent}>
+                                <div class={`${style.navlink} ${style.dropdownHeader}`} onMouseEnter={() => setShowLieu(true) + setShowPresta(false)}>
+                                    Le lieu ▾
+                                </div>
+                                <div
+                                    class={showLieu ? `${style.dropdownContent} ${style.collapse}` : style.dropdownContent}
+                                    onMouseLeave={() => {
+                                        setShowLieu(false);
+                                    }}
+                                >
                                     <div class={style.dropdownElement}>
-                                        <Link class={style.navlink} href="/compagnie_indes">
+                                        <Link
+                                            class={style.navlink}
+                                            href="/compagnie_indes"
+                                            onClick={() => {
+                                                setShowLieu(false);
+                                            }}
+                                        >
                                             La Compagnie des Indes
                                         </Link>
                                     </div>
                                     <div class={style.dropdownElement}>
-                                        <Link class={style.navlink} href="/construction_malouinieres">
+                                        <Link
+                                            class={style.navlink}
+                                            href="/construction_malouinieres"
+                                            onClick={() => {
+                                                setShowLieu(false);
+                                            }}
+                                        >
                                             La construction des malouinières
                                         </Link>
                                     </div>
                                     <div class={style.dropdownElement}>
-                                        <Link class={style.navlink} href="/histoire_ville_bague">
+                                        <Link
+                                            class={style.navlink}
+                                            href="/histoire_ville_bague"
+                                            onClick={() => {
+                                                setShowLieu(false);
+                                            }}
+                                        >
                                             L'Histoire de la Ville Bague
                                         </Link>
                                     </div>
                                     <div class={style.dropdownElement}>
-                                        <Link class={style.navlink} href="/jacques_chauveau">
+                                        <Link
+                                            class={style.navlink}
+                                            href="/jacques_chauveau"
+                                            onClick={() => {
+                                                setShowLieu(false);
+                                            }}
+                                        >
                                             Jacques Chauveau
                                         </Link>
                                     </div>
                                 </div>
                             </div>
                             <div>
-                                <div class={`${style.navlink} ${style.dropdownHeader}`}>Prestations ▾</div>
-                                <div class={style.dropdownContent}>
+                                <div class={`${style.navlink} ${style.dropdownHeader}`} onMouseEnter={() => +setShowPresta(true) + setShowLieu(false)}>
+                                    Prestations ▾
+                                </div>
+                                <div
+                                    class={showPresta ? `${style.dropdownContent} ${style.collapse}` : style.dropdownContent}
+                                    onMouseLeave={() => {
+                                        setShowPresta(false);
+                                    }}
+                                >
+                                    {" "}
                                     <div class={style.dropdownElement}>
-                                        <Link class={style.navlink} href="/visites_guidees">
+                                        <Link
+                                            class={style.navlink}
+                                            href="/visites_guidees"
+                                            onClick={() => {
+                                                setShowPresta(false);
+                                            }}
+                                        >
                                             Visites guidées
                                         </Link>
                                     </div>
                                     <div class={style.dropdownElement}>
-                                        <Link class={style.navlink} href="/receptions">
+                                        <Link
+                                            class={style.navlink}
+                                            href="/receptions"
+                                            onClick={() => {
+                                                setShowPresta(false);
+                                            }}
+                                        >
                                             Réceptions
                                         </Link>
                                     </div>
                                     <div class={style.dropdownElement}>
-                                        <Link class={style.navlink} href="/location_gites">
+                                        <Link
+                                            class={style.navlink}
+                                            href="/location_gites"
+                                            onClick={() => {
+                                                setShowPresta(false);
+                                            }}
+                                        >
                                             Locations de gîtes
                                         </Link>
                                     </div>
                                     <div class={style.dropdownElement}>
-                                        <Link class={style.navlink} href="/evenements">
+                                        <Link
+                                            class={style.navlink}
+                                            href="/evenements"
+                                            onClick={() => {
+                                                setShowPresta(false);
+                                            }}
+                                        >
                                             Evénements
                                         </Link>
                                     </div>
                                 </div>
                             </div>
-                            <Link class={style.navlink} href="/galerie">
+                            <Link
+                                class={style.navlink}
+                                href="/galerie"
+                                onMouseEnter={() => {
+                                    setShowPresta(false);
+                                }}
+                            >
                                 Galerie
                             </Link>
                             <Link class={style.navlink} href="/contacts">

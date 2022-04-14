@@ -233,7 +233,7 @@
     height: 100vh;
     width: 70%;
     max-width: 300px;
-    padding: 70px 0 20px 0;
+    padding: 80px 0 20px 0;
     background-color: rgb(61, 61, 61, 1);
     box-shadow: 0px 2px 5px rgb(0 0 0 / 50%);
     transition: 0.3s ease-in-out;
@@ -275,6 +275,7 @@
 .navbarMobileHidden {
     width: 0;
 }
+
 .hidden {
     display: none;
 }
@@ -291,6 +292,18 @@
     }
     .navbarMobile {
         display: none;
+    }
+    .dropdownContent {
+        max-width: unset;
+        float: inline-start;
+        position: absolute;
+    }
+    .dropdownContent .navlink {
+        width: 100%;
+        text-align: left;
+        justify-content: left;
+        margin: 2.5px 0;
+        padding: 0 20px;
     }
 }
 
@@ -327,5 +340,8 @@
     #navbarSubtitle {
         font-size: 0.7rem;
         line-height: 14px;
+    }
+    .navbarMobile {
+        padding: 70px 0 20px 0;
     }
 }

@@ -38,8 +38,7 @@
     color: rgb(46, 46, 46);
     font-size: 180%;
     line-height: 2.8rem;
-    text-shadow: rgb(0 0 0 / 15%) 0px 3px 5px,
-        rgb(255 255 255 / 30%) 0px -5px 35px;
+    text-shadow: rgb(0 0 0 / 15%) 0px 3px 5px, rgb(255 255 255 / 30%) 0px -5px 35px;
     background-color: rgb(255, 255, 255);
     opacity: 0.8;
     padding: 7px 10px;
@@ -72,7 +71,7 @@
 }
 
 .homeVisit {
-    background: linear-gradient(135deg, #0099cc09, #0099cc04);
+    background: linear-gradient(135deg, #0099cc1e, #0099cc04);
     text-align: justify;
     width: 100vw;
     display: flex;
@@ -115,7 +114,8 @@
     margin: 0 0 0 5%;
     padding: 20px;
     background-color: #0099cc0b;
-    background: linear-gradient(135deg, #0099cc09, #0099cc04);
+    background: linear-gradient(135deg, #0099cc1e, #0099cc04);
+    box-shadow: 2.5px 2.5px 8px rgb(0 0 0 / 30%);
     border: 1px solid rgba(226, 226, 226, 0.671);
     display: flex;
     flex-direction: column;
