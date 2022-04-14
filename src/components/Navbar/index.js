@@ -20,12 +20,13 @@ const Navbar = () => {
                         </a>
                     </div>
                     <div
-                        class={style.hamburgerMenu}
+                        class={mobileOpen ? `${style.hamburgerMenu} ${style.open}` : style.hamburgerMenu}
                         onClick={() => {
                             setMobileOpen(!mobileOpen);
                         }}
                     >
-                        <img src={Hamburger} alt="menu" />
+                        {/* <img src={Hamburger} alt="menu" /> */}
+                        <div class={style.hamburgerMenuBar}></div>
                     </div>
                     <div class={style.navbarRight}>
                         <div class={style.navbarLinks}>
