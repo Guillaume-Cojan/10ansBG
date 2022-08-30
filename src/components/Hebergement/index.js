@@ -2,12 +2,6 @@ import { Link } from "preact-router/match";
 import style from "./style.css";
 import Villebague from "../../assets/villebague.jpeg";
 
-window.onload = function () {
-    let myiFrame = document.getElementById("bnb1");
-    let doc = myiFrame.contentDocument;
-    doc.body.innerHTML = doc.body.innerHTML + "<style>color=green</style>";
-};
-
 const Hebergement = () => (
     <>
         <div class={style.componentIntro}>
