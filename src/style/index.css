@@ -1,99 +1,200 @@
-html,
 body {
-    height: 100%;
-    width: 100%;
-    padding: 0;
     margin: 0;
-    background: #fafafa;
-    color: #434343;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    overflow-x: hidden;
-    box-sizing: border-box;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-#app {
-    height: 100%;
-    margin: 70px 0 0 0;
+    font-family: "Lato", sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #555555;
 }
 
 h1 {
-    font-family: "Poppins", sans-serif;
+    font-family: "Oleo Script";
+    font-size: 3.6em;
+    color: #c99396;
+    text-align: center;
+    margin: 4% 0;
+}
+
+.p-light {
+    color: #999999;
+    font-size: 14px;
+}
+
+.signature {
+    color: #c99396;
+    font-family: "Oleo Script";
+    font-size: 1.6em;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 100vh;
+}
+
+.counter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    background-image: url("../assets/wall3.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    color: white;
+    -webkit-clip-path: polygon(35% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.counter-circles {
+    margin-left: 35%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 500px;
+}
+
+.counter-circle {
+    width: 155px;
+    height: 155px;
+    border: 3px solid white;
+    backdrop-filter: blur(3px) grayscale(20%) brightness(90%);
+    -webkit-backdrop-filter: blur(3px) grayscale(20%) brightness(90%);
+    border-radius: 50%;
+    margin: 3% 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    font-family: "Oleo Script";
+}
+
+.counter-circle:hover {
+    transform: scale(1.15);
+}
+
+.counter-figure {
+    font-size: 3rem;
     font-weight: 600;
-    font-size: 2.375rem;
-    color: #434343;
-    line-height: 110%;
-    letter-spacing: 0.005em;
 }
 
-h2 {
+#expired {
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25%;
+    margin: 0;
+    padding: 35px 0px 55px 75px;
+    background-color: none;
+}
+
+.welcome-intro {
+    width: 165%;
+    line-height: 1;
+    margin: 12px 0;
+    display: flex;
+    justify-content: left;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+
+.welcome-details {
     font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    font-size: 1.8rem;
-    color: #434343;
-    line-height: 110%;
-    letter-spacing: 0.005em;
 }
 
-h3 {
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    font-size: 1.4rem;
-    color: #434343;
-    line-height: 110%;
-    letter-spacing: 0.005em;
-    margin: 38px 0 18px 0;
+.welcome-details-main {
+    font-size: 1.3em;
+    margin-bottom: 15%;
+    width: 120%;
 }
 
-h4 {
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-size: 1.1rem;
-    color: #434343;
-    line-height: 110%;
-    letter-spacing: 0.005em;
-    margin: 20px 0 16px 0;
+.counter-label {
+    font-size: 140%;
 }
 
-p {
-    font-family: "Open Sans", sans-serif;
-    font-weight: 400;
-    font-size: 1.0625rem;
-    color: #434343;
-    line-height: 140%;
-    letter-spacing: 0.005em;
-    margin: 0 0 20px 0;
+.rsvp-container {
+    width: 100%;
+    min-height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-@media screen and (max-width: 700px) {
-    #app {
-        margin: 60px 0 0 0;
-    }
+.rsvp-container button {
+    border-radius: 50px;
+    background-color: #6daab3;
+    color: white;
+    border: none;
+    width: 100px;
+    height: 35px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #588991;
+    transition: 0.2s ease-in-out;
+}
+
+@media (max-width: 1065px) {
     h1 {
-        font-size: 1.9rem;
-        line-height: 100%;
+        font-size: 3.2em;
     }
-
-    h2 {
-        font-size: 1.4rem;
-        line-height: 110%;
+    .main-container {
+        flex-direction: column;
+        height: 100%;
     }
-
-    h3 {
+    .counter-container {
+        width: 100%;
+        padding: 4% 0%;
+        -webkit-clip-path: none;
+    }
+    .counter-circles {
+        justify-content: center;
+        width: 100%;
+        max-width: none;
+        margin-left: 0;
+    }
+    .counter-circle {
+        width: 120px;
+        height: 120px;
+        margin: 2% 2%;
+    }
+    .counter-figure {
+        font-size: 2.5rem;
+    }
+    .counter-label {
         font-size: 1.2rem;
-        line-height: 110%;
     }
-
-    h4 {
-        font-size: 0.9rem;
+    .welcome-intro {
+        width: 100%;
+        margin: 20px 0 10px 0;
+        justify-content: center;
     }
-
-    p {
-        font-size: 1rem;
-        line-height: 130%;
+    .welcome-top-logo {
+        width: 300px;
+        margin: 0;
+    }
+    .welcome-container {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 2% 8%;
+        max-width: 635px;
+        margin: auto;
+    }
+    .welcome-details-main {
+        margin: 6% 0 14% 0;
+        width: 100%;
+    }
+    .social-links {
+        margin: 8% 0%;
+    }
+    #expired {
+        font-size: 2.3rem;
+        font-weight: 900;
     }
 }

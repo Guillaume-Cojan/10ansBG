@@ -1,8 +1,6 @@
 import { Link } from "preact-router/match";
 import style from "./style.css";
-import Hamburger from "../../assets/hamburger.png";
-import Eng from "../../assets/uk.png";
-import { useState, useEffect } from "preact/hooks";
+import { useState } from "preact/hooks";
 
 const Navbar = () => {
     const [mobileOpen, setMobileOpen] = useState(false);
@@ -15,14 +13,7 @@ const Navbar = () => {
         <>
             <div class={style.navbarMainContainer}>
                 <nav class={style.navbarContainer} onMouseEnter={() => setShowLieu(false) + setShowPresta(false)}>
-                    <div class={style.navbarLeft}>
-                        <Link id={style.navbarMainTitle} href="/">
-                            LA VILLE BAGUE
-                        </Link>
-                        <a href="http://www.saintcoulomb.com/" id={style.navbarSubtitle} target="_blank" rel="noopener noreferrer">
-                            SAINT-COULOMB
-                        </a>
-                    </div>
+                    <div class={style.navbarLeft}></div>
                     <div
                         class={mobileOpen ? `${style.hamburgerMenu} ${style.open}` : style.hamburgerMenu}
                         onClick={() => {
@@ -43,7 +34,7 @@ const Navbar = () => {
                             </Link>
                             <div>
                                 <div class={`${style.navlink} ${style.dropdownHeader}`} onMouseEnter={() => setShowLieu(true) + setShowPresta(false)}>
-                                    Le lieu ▾
+                                    Festivités ▾
                                 </div>
                                 <div
                                     class={showLieu ? `${style.dropdownContent} ${style.collapse}` : style.dropdownContent}
@@ -54,52 +45,41 @@ const Navbar = () => {
                                     <div class={style.dropdownElement}>
                                         <Link
                                             class={style.navlink}
-                                            href="/compagnie_indes"
+                                            href="/cocktail"
                                             onClick={() => {
                                                 setShowLieu(false);
                                             }}
                                         >
-                                            La Compagnie des Indes
+                                            Le cocktail
                                         </Link>
                                     </div>
                                     <div class={style.dropdownElement}>
                                         <Link
                                             class={style.navlink}
-                                            href="/construction_malouinieres"
+                                            href="/soiree"
                                             onClick={() => {
                                                 setShowLieu(false);
                                             }}
                                         >
-                                            La construction des malouinières
+                                            La soirée
                                         </Link>
                                     </div>
                                     <div class={style.dropdownElement}>
                                         <Link
                                             class={style.navlink}
-                                            href="/histoire_ville_bague"
+                                            href="/lendemain"
                                             onClick={() => {
                                                 setShowLieu(false);
                                             }}
                                         >
-                                            L'Histoire de la Ville Bague
-                                        </Link>
-                                    </div>
-                                    <div class={style.dropdownElement}>
-                                        <Link
-                                            class={style.navlink}
-                                            href="/jacques_chauveau"
-                                            onClick={() => {
-                                                setShowLieu(false);
-                                            }}
-                                        >
-                                            Jacques Chauveau
+                                            Le lendemain
                                         </Link>
                                     </div>
                                 </div>
                             </div>
                             <div>
                                 <div class={`${style.navlink} ${style.dropdownHeader}`} onMouseEnter={() => +setShowPresta(true) + setShowLieu(false)}>
-                                    Prestations ▾
+                                    Infos ▾
                                 </div>
                                 <div
                                     class={showPresta ? `${style.dropdownContent} ${style.collapse}` : style.dropdownContent}
@@ -111,45 +91,34 @@ const Navbar = () => {
                                     <div class={style.dropdownElement}>
                                         <Link
                                             class={style.navlink}
-                                            href="/visites_guidees"
+                                            href="/hebergement"
                                             onClick={() => {
                                                 setShowPresta(false);
                                             }}
                                         >
-                                            Visites guidées
+                                            Hébergement
                                         </Link>
                                     </div>
                                     <div class={style.dropdownElement}>
                                         <Link
                                             class={style.navlink}
-                                            href="/receptions"
+                                            href="/transports"
                                             onClick={() => {
                                                 setShowPresta(false);
                                             }}
                                         >
-                                            Réceptions
+                                            Transports
                                         </Link>
                                     </div>
                                     <div class={style.dropdownElement}>
                                         <Link
                                             class={style.navlink}
-                                            href="/location_gites"
+                                            href="/forum"
                                             onClick={() => {
                                                 setShowPresta(false);
                                             }}
                                         >
-                                            Locations de gîtes
-                                        </Link>
-                                    </div>
-                                    <div class={style.dropdownElement}>
-                                        <Link
-                                            class={style.navlink}
-                                            href="/evenements"
-                                            onClick={() => {
-                                                setShowPresta(false);
-                                            }}
-                                        >
-                                            Evénements
+                                            Forum
                                         </Link>
                                     </div>
                                 </div>
@@ -163,12 +132,6 @@ const Navbar = () => {
                             >
                                 Galerie
                             </Link>
-                            <Link class={style.navlink} href="/contacts">
-                                Contacts
-                            </Link>
-                        </div>
-                        <div>
-                            <img src={Eng} alt="eng-flag" class={style.engFlag} />
                         </div>
                     </div>
                 </nav>
@@ -191,55 +154,43 @@ const Navbar = () => {
                             class={`${style.navlink} ${style.dropdownHeader}`}
                             onClick={() => setShowLieuMobile(!showLieuMobile) + +setShowPrestaMobile(false)}
                         >
-                            Le lieu ▾
+                            Festivités ▾
                         </div>
                         <div class={showLieuMobile ? `${style.dropdownContent} ${style.collapse}` : style.dropdownContent}>
                             <div class={style.dropdownElement}>
                                 <Link
                                     class={style.navlink}
                                     activeClassName={style.active}
-                                    href="/compagnie_indes"
+                                    href="/cocktail"
                                     onClick={() => {
                                         setMobileOpen(false);
                                     }}
                                 >
-                                    La Compagnie des Indes
+                                    Le cocktail
                                 </Link>
                             </div>
                             <div class={style.dropdownElement}>
                                 <Link
                                     class={style.navlink}
                                     activeClassName={style.active}
-                                    href="/construction_malouinieres"
+                                    href="/soiree"
                                     onClick={() => {
                                         setMobileOpen(false);
                                     }}
                                 >
-                                    La construction des malouinières
+                                    La soirée
                                 </Link>
                             </div>
                             <div class={style.dropdownElement}>
                                 <Link
                                     class={style.navlink}
                                     activeClassName={style.active}
-                                    href="/histoire_ville_bague"
+                                    href="/lendemain"
                                     onClick={() => {
                                         setMobileOpen(false);
                                     }}
                                 >
-                                    L'Histoire de la Ville Bague
-                                </Link>
-                            </div>
-                            <div class={style.dropdownElement}>
-                                <Link
-                                    class={style.navlink}
-                                    activeClassName={style.active}
-                                    href="/jacques_chauveau"
-                                    onClick={() => {
-                                        setMobileOpen(false);
-                                    }}
-                                >
-                                    Jacques Chauveau
+                                    Le lendemain
                                 </Link>
                             </div>
                         </div>
@@ -249,59 +200,46 @@ const Navbar = () => {
                             class={`${style.navlink} ${style.dropdownHeader}`}
                             onClick={() => setShowPrestaMobile(!showPrestaMobile) + setShowLieuMobile(false)}
                         >
-                            Prestations ▾
+                            Infos ▾
                         </div>
                         <div class={showPrestaMobile ? `${style.dropdownContent} ${style.collapse}` : style.dropdownContent}>
                             <div class={style.dropdownElement}>
                                 <Link
                                     class={style.navlink}
                                     activeClassName={style.active}
-                                    href="/visites_guidees"
+                                    href="/hebergement"
                                     onClick={() => {
                                         setMobileOpen(false);
                                         setShowLieuMobile(false);
                                     }}
                                 >
-                                    Visites guidées
+                                    Hébergement
                                 </Link>
                             </div>
                             <div class={style.dropdownElement}>
                                 <Link
                                     class={style.navlink}
                                     activeClassName={style.active}
-                                    href="/receptions"
+                                    href="/transports"
                                     onClick={() => {
                                         setMobileOpen(false);
                                         setShowLieuMobile(false);
                                     }}
                                 >
-                                    Réceptions
+                                    Transports
                                 </Link>
                             </div>
                             <div class={style.dropdownElement}>
                                 <Link
                                     class={style.navlink}
                                     activeClassName={style.active}
-                                    href="/location_gites"
+                                    href="/forum"
                                     onClick={() => {
                                         setMobileOpen(false);
                                         setShowLieuMobile(false);
                                     }}
                                 >
-                                    Locations de gîtes
-                                </Link>
-                            </div>
-                            <div class={style.dropdownElement}>
-                                <Link
-                                    class={style.navlink}
-                                    activeClassName={style.active}
-                                    href="/evenements"
-                                    onClick={() => {
-                                        setMobileOpen(false);
-                                        setShowLieuMobile(false);
-                                    }}
-                                >
-                                    Evénements
+                                    Forum
                                 </Link>
                             </div>
                         </div>
@@ -317,26 +255,6 @@ const Navbar = () => {
                     >
                         Galerie
                     </Link>
-                    <Link
-                        class={style.navlink}
-                        activeClassName={style.active}
-                        href="/contacts"
-                        onClick={() => {
-                            setMobileOpen(false);
-                            setShowLieuMobile(false);
-                        }}
-                    >
-                        Contacts
-                    </Link>
-                </div>
-                <div
-                    class={mobileOpen ? "" : style.hidden}
-                    onClick={() => {
-                        setMobileOpen(false);
-                        setShowLieuMobile(false);
-                    }}
-                >
-                    <img src={Eng} alt="eng-flag" class={style.engFlag} />
                 </div>
             </div>
         </>

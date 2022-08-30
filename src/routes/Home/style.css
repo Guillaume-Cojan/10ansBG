@@ -1,4 +1,219 @@
-.homeMainContainer {
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext");
+
+body {
+    margin: 0;
+    font-family: "Lato", sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #555555;
+}
+
+h1 {
+    font-family: "Oleo Script";
+    font-size: 3.6em;
+    color: #c99396;
+    text-align: center;
+    margin: 4% 0;
+}
+
+.pLight {
+    color: #999999;
+    font-size: 14px;
+}
+
+.signature {
+    color: #c99396;
+    font-family: "Oleo Script";
+    font-size: 1.6em;
+}
+
+.mainContainer {
+    display: flex;
+    position: absolute;
+    top: 0;
+    flex-direction: row-reverse;
+    height: 100vh;
+}
+
+.counterContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    background-image: url("../../assets/wall3.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    color: white;
+    -webkit-clip-path: polygon(35% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.counterCircles {
+    margin-left: 35%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 500px;
+}
+
+.counterCircle {
+    width: 155px;
+    height: 155px;
+    border: 3px solid white;
+    backdrop-filter: blur(3px) grayscale(20%) brightness(90%);
+    -webkit-backdrop-filter: blur(3px) grayscale(20%) brightness(90%);
+    border-radius: 50%;
+    margin: 3% 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    font-family: "Oleo Script";
+}
+
+.counterCircle:hover {
+    transform: scale(1.15);
+}
+
+.counterFigure {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+#expired {
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.welcomeContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25%;
+    margin: 0;
+    padding: 65px 0px 55px 75px;
+    background-color: none;
+}
+
+.welcomeIntro {
+    width: 165%;
+    line-height: 1;
+    margin: 12px 0;
+    display: flex;
+    justify-content: left;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+
+.welcomeDetails {
+    font-family: "Poppins", sans-serif;
+}
+
+.welcomeDetailsMain {
+    font-size: 1.3em;
+    margin-bottom: 15%;
+    width: 120%;
+}
+
+.counterLabel {
+    font-size: 140%;
+    font-family: "Oleo Script";
+}
+
+.rsvpContainer {
+    width: 100%;
+    min-height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rsvpContainer button {
+    border-radius: 50px;
+    background-color: #6daab3;
+    color: white;
+    border: none;
+    width: 100px;
+    height: 35px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #588991;
+    transition: 0.2s ease-in-out;
+}
+
+@media (max-width: 1065px) {
+    h1 {
+        font-size: 3.2em;
+    }
+    .mainContainer {
+        flex-direction: column;
+        height: 100%;
+        width: 100vw;
+    }
+    .counterContainer {
+        width: 100%;
+        padding: 10% 0% 4% 0;
+        -webkit-clip-path: none;
+    }
+    .counterCircles {
+        justify-content: center;
+        width: 100%;
+        max-width: 1350px;
+        margin-left: 0;
+    }
+    .counterCircle {
+        width: 120px;
+        height: 120px;
+        margin: 2% 2%;
+    }
+    .counterFigure {
+        font-size: 2.5rem;
+    }
+    .counterLabel {
+        font-size: 1.2rem;
+    }
+    .welcomeIntro {
+        width: 100%;
+        margin: 20px 0 10px 0;
+        justify-content: center;
+    }
+    .welcomeTopLogo {
+        width: 300px;
+        margin: 0;
+    }
+    .welcomeContainer {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 2% 2%;
+        max-width: 80%;
+        margin: auto;
+    }
+    .welcomeDetailsMain {
+        margin: 6% 0 14% 0;
+        width: 100%;
+    }
+    .socialLinks {
+        margin: 8% 0%;
+    }
+    #expired {
+        font-size: 2.3rem;
+        font-weight: 900;
+    }
+}
+@media (max-width: 900px) {
+    .counterCircles {
+        justify-content: center;
+        width: 100%;
+        max-width: 350px;
+        margin-left: 0;
+    }
+}
+
+/* .homeMainContainer {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -71,7 +286,7 @@
 }
 
 .homeVisit {
-    background: linear-gradient(135deg, #0099cc1e, #0099cc04);
+    background: linear-gradient(135deg, #0099cc10, #0099cc04);
     text-align: justify;
     width: 100vw;
     display: flex;
@@ -114,7 +329,7 @@
     margin: 0 0 0 5%;
     padding: 20px;
     background-color: #0099cc0b;
-    background: linear-gradient(135deg, #0099cc1e, #0099cc04);
+    background: linear-gradient(135deg, #0099cc10, #0099cc04);
     box-shadow: 2.5px 2.5px 8px rgb(0 0 0 / 30%);
     border: 1px solid rgba(226, 226, 226, 0.671);
     display: flex;
@@ -274,4 +489,4 @@
     .homeOther {
         padding: 0 6%;
     }
-}
+} */
