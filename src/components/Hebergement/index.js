@@ -17,7 +17,7 @@ const Hebergement = () => (
             <h2>Les hôtels</h2>
             <p>
                 Nous vous conseillons vivement de réserver une chambre d'hôtel proche du lieu de la soirée pour pouvoir rentrer à pieds. Voici une liste des
-                hôtels accessible dans le quartier de Saint Servan.
+                hôtels accessible dans le quartier de Saint-Servan.
             </p>
             <h3>Le Manoir du Cunningham</h3>
             <p>Situé juste en face du lieu de la soirée, cet hôtel de charme propose des chambres doubles à partir de 160€ la nuit.</p>
