@@ -1,5 +1,5 @@
 import style from "./style.css";
-// import "./countdown";
+import "./countdown";
 
 const Home = () => {
     return (
