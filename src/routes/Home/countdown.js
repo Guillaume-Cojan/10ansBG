@@ -7,14 +7,26 @@ var x = setInterval(function () {
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    document.getElementById("counterDaysLeft").innerHTML = days;
-    document.getElementById("counterHoursLeft").innerHTML = hours;
-    document.getElementById("counterMinutesLeft").innerHTML = minutes;
-    document.getElementById("counterSecondsLeft").innerHTML = seconds;
+    if (typeof window !== "undefined") {
+        document.getElementById("counterDaysLeft").innerHTML = days;
+    }
+    if (typeof window !== "undefined") {
+        document.getElementById("counterHoursLeft").innerHTML = hours;
+    }
+    if (typeof window !== "undefined") {
+        document.getElementById("counterMinutesLeft").innerHTML = minutes;
+    }
+    if (typeof window !== "undefined") {
+        document.getElementById("counterSecondsLeft").innerHTML = seconds;
+    }
 
     if (distance < 0) {
         clearInterval(x);
-        document.getElementById("counter-circles").style.display = "none";
-        document.getElementById("expired").innerHTML = "Let's go Party!";
+        if (typeof window !== "undefined") {
+            document.getElementById("counter-circles").style.display = "none";
+        }
+        if (typeof window !== "undefined") {
+            document.getElementById("expired").innerHTML = "Let's go Party!";
+        }
     }
 }, 1000);
