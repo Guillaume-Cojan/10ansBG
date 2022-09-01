@@ -1,12 +1,32 @@
 import style from "./style.css";
+import "./countdown";
 
-var count = new Date("01 october 2022 15:00:00").getTime();
-var now = new Date().getTime();
-var distance = count - now;
-var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+// var count = new Date("01 october 2022 15:00:00").getTime();
+
+// function x() {
+//     setInterval(function () {
+//         var now = new Date().getTime();
+//         var distance = count - now;
+//         // var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+//         // var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+//         // var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+//         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+//         // document.getElementById("counter-days-left").innerHTML = days;
+//         // document.getElementById("counter-hours-left").innerHTML = hours;
+//         // document.getElementById("counter-minutes-left").innerHTML = minutes;
+//         // document.getElementById("counter-seconds-left").innerHTML = seconds;
+
+//         if (distance < 0) {
+//             clearInterval(x);
+//             // document.getElementById("counter-circles").style.display = "none";
+//             // document.getElementById("expired").innerHTML = "Let's go Party!";
+//         } else {
+//             seconds;
+//         }
+//     }, 1000);
+// }
+// console.log(x());
 
 const Home = () => {
     return (
@@ -14,27 +34,19 @@ const Home = () => {
             <div class={style.counterContainer}>
                 <div class={style.counterCircles} id={"counter-circles"}>
                     <div class={style.counterCircle}>
-                        <span class={style.counterFigure} id={"counterDaysLeft"}>
-                            {days}
-                        </span>
+                        <span class={style.counterFigure} id={"counterDaysLeft"}></span>
                         <span class={style.counterLabel}>Jours</span>
                     </div>
                     <div class={style.counterCircle}>
-                        <span class={style.counterFigure} id={"counterHoursLeft"}>
-                            {hours}
-                        </span>
+                        <span class={style.counterFigure} id={"counterHoursLeft"}></span>
                         <span class={style.counterLabel}>Heures</span>
                     </div>
                     <div class={style.counterCircle}>
-                        <span class={style.counterFigure} id={"counterMinutesLeft"}>
-                            {minutes}
-                        </span>
+                        <span class={style.counterFigure} id={"counterMinutesLeft"}></span>
                         <span class={style.counterLabel}>Minutes</span>
                     </div>
                     <div class={style.counterCircle}>
-                        <span class={style.counterFigure} id={"counterSecondsLeft"}>
-                            {seconds}
-                        </span>
+                        <span class={style.counterFigure} id={"counterSecondsLeft"}></span>
                         <span class={style.counterLabel}>Secondes</span>
                     </div>
                 </div>
