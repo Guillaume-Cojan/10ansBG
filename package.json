@@ -1,6 +1,6 @@
 {
     "private": true,
-    "name": "la-ville-bague-new",
+    "name": "10ansB&G",
     "version": "0.0.0",
     "license": "MIT",
     "scripts": {
@@ -55,6 +55,4 @@
         "react-dom": "preact/compat",
         "react/jsx-runtime": "preact/jsx-runtime"
     }
-    
 }
-
