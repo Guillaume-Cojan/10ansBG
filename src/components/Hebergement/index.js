@@ -1,17 +1,18 @@
 import { Link } from "preact-router/match";
 import style from "./style.css";
-import Villebague from "../../assets/villebague.jpeg";
 
 const Hebergement = () => (
     <>
         <div class={style.componentIntro}>
-            <h1>L'hébergement</h1>
+            <h1>Hébergement</h1>
         </div>
         <div class={style.componentContainer}>
             <h2>Les hôtels</h2>
             <p>
                 Nous vous conseillons vivement de réserver une chambre d'hôtel proche du lieu de la soirée pour pouvoir rentrer à pieds. Voici une liste des
-                hôtels accessible dans le quartier de Saint-Servan.
+                hôtels accessible dans le quartier de Saint-Servan. <br />
+                <br />
+                <strong>Ne tardez pas car les lieux se remplissent vite !</strong>
             </p>
             <h3>Le Manoir du Cunningham</h3>
             <p>Situé juste en face du lieu de la soirée, cet hôtel de charme propose des chambres doubles à partir de 160€ la nuit.</p>
@@ -57,20 +58,7 @@ const Hebergement = () => (
         </div>
         <div class={style.componentContainer}>
             <h2>AirBnb</h2>
-            <p>L'offre est assez nombreuse autour du port des Bas Sablons. Si vous préférez un appartement, ne tardez pas trop à réserver.</p>
-
-            <div id="bnb1" class="airbnb-embed-frame" data-id="52591451" data-view="home" style="width:100%;height:300px;margin:auto">
-                <a href="https://www.airbnb.fr/rooms/52591451?check_in=2022-10-01&amp;check_out=2022-10-02&amp;guests=1&amp;adults=2&amp;s=66&amp;source=embed_widget">
-                    Voir sur Airbnb
-                </a>
-                <a
-                    href="https://www.airbnb.fr/rooms/52591451?check_in=2022-10-01&amp;check_out=2022-10-02&amp;guests=1&amp;adults=2&amp;s=66&amp;source=embed_widget"
-                    rel="nofollow"
-                >
-                    ⭐️Le bas-Sablons⭐️
-                </a>
-                <script async="" src="https://www.airbnb.fr/embeddable/airbnb_jssdk"></script>
-            </div>
+            <p>De nombreuses offres disponibles autour des Bas sablons (appartement autour de 120 euros pour 4 personnes).</p>
         </div>
     </>
 );

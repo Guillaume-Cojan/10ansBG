@@ -5,7 +5,7 @@ import Villebague from "../../assets/villebague.jpeg";
 const Lendemain = () => (
     <>
         <div class={style.componentIntro}>
-            <h1>Le lendemain</h1>
+            <h1>Lendemain</h1>
         </div>
         <div class={style.componentContainer}>
             <h2>Malouinière de la Ville Bague</h2>
@@ -17,7 +17,7 @@ const Lendemain = () => (
         </div>
         <div class={style.componentContainer}>
             <h2>Au menu :</h2>
-            <p>Apéro, dîner et soirée dansante 🥳 jusqu'à 3h00 du matin (si vous y tenez !)</p>
+            <p>Champêtre déjeuner dans le parc ou bien sous la serre selon l’ondée bretonne du moment 😊</p>
         </div>
         <div class={style.componentContainer}>
             <h2>Plan d'accès</h2>

@@ -5,7 +5,7 @@ import Cunningham from "../../assets/cunnigham.jpeg";
 const Soiree = () => (
     <>
         <div class={style.componentIntro}>
-            <h1>La Soirée</h1>
+            <h1>Soirée</h1>
         </div>
         <div class={style.componentContainer}>
             <h2>Le Cunningham's Bar</h2>

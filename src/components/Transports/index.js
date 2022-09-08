@@ -4,7 +4,7 @@ import style from "./style.css";
 const Transports = () => (
     <>
         <div class={style.componentIntro}>
-            <h1>Le Transport</h1>
+            <h1>Transports</h1>
         </div>
         <div class={style.componentContainer}>
             <h2>En voiture</h2>

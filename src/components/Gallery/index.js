@@ -7,7 +7,7 @@ import Wall4 from ".././../assets/wall4.png";
 const Gallery = () => (
     <>
         <div class={style.componentIntro}>
-            <h1>La Galerie</h1>
+            <h1>Galerie</h1>
         </div>
         <div class={style.componentContainer}>
             <h2>Vous avez des photos à partager avec nous avant le jour J ?</h2>

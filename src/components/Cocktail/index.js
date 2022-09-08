@@ -5,7 +5,7 @@ import Evantail from "../../assets/eventail.jpeg";
 const Cocktail = () => (
     <>
         <div class={style.componentIntro}>
-            <h1>Le Cocktail</h1>
+            <h1>Cocktail</h1>
         </div>
         <div class={style.componentContainer}>
             <h2>Le lieu du cocktail étant maintenu secret... 😉</h2>
@@ -14,7 +14,10 @@ const Cocktail = () => (
         </div>
         <div class={style.componentContainer}>
             <h2>Dress code</h2>
-            <p>Venez comme vous êtes, mais si possible en casual chic !</p>
+            <p>
+                Nœuds papillon, robes longues, tout est permis ! <br />
+                Venez comme vous êtes mais si possible en casual chic pour faire de l’œil à notre photographe lors du cocktail !
+            </p>
         </div>
         <div class={style.componentContainer}>
             <h2>Plan d'accès</h2>

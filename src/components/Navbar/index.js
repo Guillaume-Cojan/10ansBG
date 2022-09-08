@@ -118,7 +118,7 @@ const Navbar = () => {
                                                 setShowPresta(false);
                                             }}
                                         >
-                                            Forum
+                                            Contacts
                                         </Link>
                                     </div>
                                 </div>
@@ -239,7 +239,7 @@ const Navbar = () => {
                                         setShowLieuMobile(false);
                                     }}
                                 >
-                                    Forum
+                                    Contacts
                                 </Link>
                             </div>
                         </div>

@@ -16,6 +16,10 @@ h1 {
     margin: 4% 0;
 }
 
+.hidden {
+    display: none;
+}
+
 .pLight {
     color: #999999;
     font-size: 14px;
@@ -112,7 +116,7 @@ h1 {
 }
 
 .welcomeDetailsMain {
-    font-size: 1.3em;
+    font-size: 1em;
     margin-bottom: 15%;
     width: 120%;
 }
@@ -143,6 +147,17 @@ h1 {
 button:hover {
     background-color: #588991;
     transition: 0.2s ease-in-out;
+}
+
+.letsGo {
+    margin-left: 20%;
+    margin-bottom: 20%;
+    display: flex;
+    flex-direction: column;
+}
+
+.letsGo h1 {
+    color: white !important;
 }
 
 @media (max-width: 1065px) {
@@ -203,7 +218,31 @@ button:hover {
         font-size: 2.3rem;
         font-weight: 900;
     }
+    .letsGo {
+        margin-left: 0;
+        margin-bottom: 10%;
+        display: flex;
+        flex-direction: column;
+    }
 }
+@media (max-width: 700px) {
+    .letsGo {
+        margin-left: 0;
+        margin-bottom: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .letsGo h1 {
+        font-size: 2.3em !important;
+    }
+
+    .letsGo h1:first-child {
+        margin-right: 12px;
+    }
+}
+
 @media (max-width: 900px) {
     .counterCircles {
         justify-content: center;
